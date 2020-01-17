@@ -2,7 +2,7 @@
 
 Requires at least: 4.5
 Tested up to: 4.9.6
-Version: 1.0.0
+Version: 3.0.0
 License: GPLv3
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
@@ -39,6 +39,7 @@ You should have received a copy of the GNU General Public License
 along with this program. If not, see < http://www.gnu.org/licenses/ >
 
 == Changelog ==
-
+= 3.0.0 =
+* Fix: updated theme mods
 = 1.0.0 =
 * Initial release
