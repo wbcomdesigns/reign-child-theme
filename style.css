@@ -1,14 +1,27 @@
 /*
 Theme Name: REIGN Child
-Theme URI: https://wbcomdesigns.com/downloads/reign-buddypress-theme/
+Theme URI: https://reigntheme.com/
 Author: Wbcom Designs
 Author URI: https://wbcomdesigns.com/
-Description: Premium BuddyPress Theme with Elementor Page Builder support.
-Version: 3.0.0
-License: GNU General Public License v2 or later
-License URI: LICENSE
-Text Domain: reign-child
+Description: The official child theme for Reign. Put your custom CSS, PHP and template overrides here so they survive Reign updates. Requires the Reign parent theme.
 Template: reign-theme
-Domain Path: /languages/
-Tags: one-column, two-columns, right-sidebar, custom-background, custom-menu, featured-images, post-formats, full-width-template, translation-ready, theme-options, threaded-comments, footer-widgets, custom-logo
+Version: 5.0.0
+Requires at least: 6.5
+Tested up to: 7.1
+Requires PHP: 8.0
+License: GNU General Public License v2 or later
+License URI: https://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: reign-child
+Domain Path: /languages
 */
+
+/*
+ * Keep "Theme Name: REIGN Child" exactly as it is. Reign copies your existing
+ * Customizer settings into the child theme when you switch to it, and it
+ * recognises the child theme by that name. Rename it and the copy is skipped.
+ *
+ * Add your custom CSS below. It loads after Reign's own stylesheet, so a rule
+ * here wins over Reign's when both are equally specific.
+ *
+ * For a few quick rules you can also use Appearance > Customize > Additional CSS.
+ */

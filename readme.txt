@@ -1,45 +1,65 @@
-=== Reign Child Theme ===
+=== REIGN Child ===
 
-Requires at least: 4.5
-Tested up to: 4.9.6
-Version: 3.0.0
-License: GPLv3
-License URI: http://www.gnu.org/licenses/gpl-3.0.html
+Requires at least: 6.5
+Tested up to: 7.1
+Requires PHP: 8.0
+Version: 5.0.0
+License: GPLv2 or later
+License URI: https://www.gnu.org/licenses/gpl-2.0.html
+
+The official child theme for the Reign WordPress theme.
 
 == Description ==
 
-Reign is a premium Wordpress theme. It's perfect for community site based on BuddyPress. It is responsive, clean, modern, flat and minimal.
+Anything you edit inside the Reign theme folder is replaced the next time Reign
+updates. This child theme is a separate folder that loads on top of Reign, so
+your custom CSS, PHP and template changes survive every update.
 
-* Mobile-first, Responsive Layout
-* Custom Colors
-* Post Formats
+Your Customizer and Reign Settings choices are kept when you switch to the
+child theme. You do not need to set anything up again.
 
 == Installation ==
 
-1. In your admin panel, go to Appearance > Themes and click the Add New button.
-2. Click Upload and Choose File, then select the theme's .zip file. Click Install Now.
-3. Click Activate to use your new theme right away.
+1. Install and activate the Reign parent theme first. The child theme does not
+   work on its own.
+2. Go to Appearance > Themes > Add New > Upload Theme, choose
+   reign-child-theme.zip and select Install Now.
+3. Select Activate.
+4. Go to Reign Settings > Tools. The System status card should show Child theme:
+   Yes, and the Home checklist marks the Child theme step as done.
 
-== Copyright ==
+== Using the child theme ==
 
-Reign WordPress Theme, Copyright 2016, Wbcom Designs
-Reign is distributed under the terms of the GNU GPL
+* Custom CSS: add it to style.css in this folder. It loads after Reign's own
+  stylesheet, so your rules win when they are equally specific. For a few quick
+  rules, Appearance > Customize > Additional CSS works too.
+* Custom PHP: add it to the end of functions.php, below the marked line.
+* Template changes: copy the file you want to change from the reign-theme folder
+  into this folder at the same path, then edit the copy.
 
-This program is free software: you can redistribute it and/or modify
-it under the terms of the GNU General Public License as published by
-the Free Software Foundation, either version 3 of the License, or
-(at your option) any later version.
+Keep the theme name "REIGN Child" in style.css. Reign looks for that name to
+copy your settings across when you switch to the child theme.
 
-This program is distributed in the hope that it will be useful,
-but WITHOUT ANY WARRANTY; without even the implied warranty of
-MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
-GNU General Public License for more details.
-
-You should have received a copy of the GNU General Public License
-along with this program. If not, see < http://www.gnu.org/licenses/ >
+Full guide: https://reigntheme.com/docs/developer-guide/child-theme/
 
 == Changelog ==
+
+= 5.0.0 - October 2026 =
+
+Updated for Reign 8: your CSS now reliably wins over Reign's.
+
+* Improve  - Browsers pick up edits to style.css immediately, because its version follows the file's last change.
+* Improve  - Clear comments in style.css and functions.php show where to add CSS, PHP and template overrides.
+* Fix      - Child theme CSS now loads after all of Reign's stylesheets, including the critical stylesheet Smart Performance adds, so your rules win at equal specificity.
+* Fix      - Removed the request for Reign's style.css, which holds only the theme header and no styles.
+* Dev      - Function names are prefixed with reign_child_ to avoid clashes with plugins and snippets.
+* Dev      - Added translation loading for the reign-child text domain.
+* Compat   - Requires Reign 8, WordPress 6.5 and PHP 8.0. Tested up to WordPress 7.1.
+
 = 3.0.0 =
-* Fix: updated theme mods
+
+* Fix      - Updated theme mods handling.
+
 = 1.0.0 =
-* Initial release
+
+* New      - Initial release.
